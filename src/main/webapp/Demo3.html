@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Demo 3</title>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script src='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.js'></script>
+        <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.2.0/leaflet-omnivore.min.js'></script>
+        <link href='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.css' rel='stylesheet' />
+        <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.2.0/leaflet-omnivore.min.js'></script>
+        <script src="Demo3.js"></script>
+        <style>
+            body {
+                background:#404040;
+                color:#f8f8f8;
+                font:500 20px/26px 'Helvetica Neue', Helvetica, Arial, Sans-serif;
+                margin:0;
+                padding:0;
+                -webkit-font-smoothing:antialiased;
+            }
+            * {
+                -webkit-box-sizing:border-box;
+                -moz-box-sizing:border-box;
+                box-sizing:border-box;
+            }
+            .sidebar {
+                width:33.3333%;
+            }
+            .pad2 {
+                padding:20px;
+            }
+            .map {
+                border-left:1px solid #f8f8f8;
+                position:absolute;
+                left:33.3333%;
+                width:66.6666%;
+                top:0;bottom:0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class='sidebar pad2'>
+            
+            location:<br>
+            lat:      <input type="text"  id="lat"><br>
+            lng:      <input type="text"  id="lng"><br><br>
+            add bin:<br>
+            fullness: <input type="text"  id="fullness" value="0"><br>
+            <button id="addBinButton">add bin</button><br><br>
+            add depot:<br>
+            number of vehicles: <input type="text"  id="numOfVehicles" value="1"><br>
+            <button id="addDepotButton">add depot</button><br><br>
+            delete bin/depot:<br>
+            id:<input type="text"  id="deleteId"><br>
+            <button id="deleteButton">delete</button><br><br>
+            update bin:<br>
+            id:<input type="text"  id="updateId"><br>
+            fullness:<input type="text"  id="updateFullness" value="0"><br>
+            <button id="updateButton">update</button><br><br>
+            <button id="optimiseButton">optimise</button><br><br>
+        </div>
+        <div id='map' class='map'> </div>
+    </body>
+</html>
